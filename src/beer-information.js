@@ -5,7 +5,7 @@ const BeerInformation = (id) => {
     const beerService = new BeerService();
     const {getData} = beerService;
     const [data, setData] = useState({});
-    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
       getData(id)
       .then(data => setData(data))
